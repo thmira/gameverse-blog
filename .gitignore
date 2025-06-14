@@ -16,3 +16,4 @@ yarn-error.log
 # Ignora a pasta de uploads do backend
 backend/uploads/
 
+#
