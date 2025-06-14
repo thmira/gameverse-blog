@@ -1,0 +1,241 @@
+/* Reset básico para garantir consistência entre navegadores */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6; /* Cor de fundo suave */
+  color: #333; /* Cor de texto padrão */
+  line-height: 1.6;
+}
+
+/* Estilo para o container principal do aplicativo (App.js) */
+.app-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra mais visível */
+  background-color: #fff; /* Fundo branco para o container */
+}
+
+/* Estilo para o cabeçalho principal */
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee; /* Linha separadora */
+}
+
+.app-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.app-header h1 a {
+  text-decoration: none;
+  color: #2c3e50; /* Cor mais escura para o título */
+}
+
+.app-header p {
+  color: #666;
+}
+
+/* Estilo para a barra de navegação */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Espaçamento maior entre os itens */
+  margin-top: 20px;
+}
+
+.main-nav li a,
+.main-nav button {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px; /* Padding para botões/links de nav */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav li a {
+  color: #3498db; /* Azul vibrante */
+}
+
+.main-nav li a:hover {
+  background-color: #eaf6fc; /* Fundo claro ao passar o mouse */
+  color: #2980b9;
+}
+
+/* Estilo para botões gerais */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Cores específicas para botões */
+.btn-primary { /* Azul - para login, registro, etc. */
+  background-color: #007bff;
+  color: white;
+}
+.btn-success { /* Verde - para criar notícia */
+  background-color: #28a745;
+  color: white;
+}
+.btn-warning { /* Amarelo - para editar */
+  background-color: #ffc107;
+  color: #333; /* Texto escuro para contraste */
+}
+.btn-danger { /* Vermelho - para excluir, sair */
+  background-color: #dc3545;
+  color: white;
+}
+.btn-secondary { /* Cinza - para cancelar */
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Estilos para formulários */
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  width: calc(100% - 22px); /* 100% menos padding e borda */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+form textarea {
+  resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+form button {
+  margin-top: 10px;
+  width: auto; /* Ajusta a largura do botão automaticamente */
+  display: inline-block; /* Permite botões lado a lado */
+}
+
+/* Estilo para mensagens de erro/sucesso */
+.message.error {
+  color: #dc3545; /* Vermelho para erro */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.message.success {
+  color: #28a745; /* Verde para sucesso */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Estilos para lista de notícias e detalhes */
+.news-list ul,
+.comment-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.news-item,
+.comment-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.news-item {
+  display: flex; /* Habilita flexbox para alinhar conteúdo */
+  align-items: flex-start; /* Alinha itens ao topo */
+  gap: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+
+.news-item img {
+  width: 150px; /* Largura fixa para a imagem na lista */
+  height: 100px; /* Altura fixa */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  flex-shrink: 0; /* Impede que a imagem encolha */
+  border-radius: 4px;
+  margin-bottom: 0; /* Remove margin-bottom que pode ter vindo de estilo global */
+}
+
+.news-item .content-wrapper {
+  flex-grow: 1; /* Permite que o wrapper de conteúdo ocupe o espaço restante */
+}
+
+.news-details-container .news-details-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo da imagem no topo */
+    margin-top: 10px; /* Adiciona espaçamento acima */
+    display: block; /* Garante que ocupe a própria linha */
+}
+
+.news-item h3 a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.news-item p,
+.news-details p {
+  margin-bottom: 10px;
+}
+
+.news-item small,
+.news-details small {
+  color: #888;
+  font-size: 0.85em;
+  display: block;
+  margin-top: 10px;
+}
+
+.comment-item {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+}
+
+.comment-item p {
+  margin: 0;
+}
+
+.comment-item strong {
+  color: #34495e;
+}
+
+.comment-item small {
+  font-size: 0.75em;
+  color: #999;
+}
